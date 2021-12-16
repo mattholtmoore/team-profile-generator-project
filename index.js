@@ -5,7 +5,7 @@ const fs = require("fs");
 // Instructor provided JS page-template
 const template = require("./src/page-template.js")
 
-// Arrays
+// Array for team
 const teamMates = [];
 
 // Required JS files
@@ -14,69 +14,8 @@ const Manager = require("./lib/manager")
 const Engineer = require("./lib/engineer")
 const Intern = require("./lib/intern")
 
-// Classes of Employee, Manager, Engineer, & Intern
-// class Employee {
-//   constructor(name, id, email) {
-//     this.name = name;
-//     this.id = id;
-//     this.email = email;
-//   }
-//   getName() {
-//     return this.name;
-//   }
-//   getId() {
-//     return this.id;
-//   }
-//   getEmail() {
-//     return this.email;
-//   }
-//   getRole() {
-//     return "Employee";
-//   }
-// };
-
-// class Manager extends Employee {
-//   constructor(name, id, email, officeNumber) {
-//     super(name, id, email)
-//     this.officeNumber = officeNumber;
-//   }
-//   getRole() {
-//     return "Manager";
-//   }
-//   getOfficeNumber() {
-//     return this.officeNumber;
-//   }
-// };
-
-// class Engineer extends Employee {
-//   constructor(name, id, email, github) {
-//     super(name, id, email);
-//     this.github = github;
-//   }
-//   getRole() {
-//     return "Engineer";
-//   }
-//   getGithub() {
-//     return this.github;
-//   }
-// };
-
-// class Intern extends Employee {
-//   constructor(name, id, email, school) {
-//     super(name, id, email);
-//     this.school = school;
-//   }
-//   getRole() {
-//     return "Intern";
-//   }
-//   getSchool() {
-//     return this.school;
-//   }
-// };
-
 // Questions and prompts for Manager
 const addManager = () => {
-
   inquirer
     .prompt([
       {
@@ -108,10 +47,8 @@ const addManager = () => {
         response.officeNumber,
         "Manager",
       );
-
       teamMates.push(manager);
       addOneMore();
-
     })
 }
 
@@ -139,7 +76,6 @@ const addOneMore = () => {
 
 // Questions and prompts for Engineer
 const addEngineer = () => {
-
   inquirer
     .prompt([
       {
@@ -173,14 +109,11 @@ const addEngineer = () => {
       );
       teamMates.push(engineer);
       addOneMore();
-
     })
-  
 }
 
 // Questions and prompts for Intern
 const addIntern = () => {
-
   inquirer
     .prompt([
       {
@@ -214,11 +147,10 @@ const addIntern = () => {
       );
       teamMates.push(intern);
       addOneMore();
-
     })
-  
 }
 
+// Writing file to team.html
 const writeFile = str => {
   console.log(teamMates);
   fs.writeFile('./dist/team.html', template(teamMates), err => {

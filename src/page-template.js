@@ -1,14 +1,13 @@
 // IMPORTANT!!
 // Our instructor (Anthony Cooper) provided our cohort with this JS Template for support purposes. THIS IS NOT PLAGIARISM!
 
-
 // create the team
 const generateTeam = team => {
   // create the manager html
   const generateManager = manager => {
       return `
       <div class="card employee-card mx-2 shadow p-3 mb-5 bg-white rounded">
-      <div class="card-header bg-info border border-dark text-light">
+      <div class="card-header bg-primary border border-dark text-light">
           <h2 class="card-title">${manager.getName()}</h2>
           <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
       </div>
@@ -26,7 +25,7 @@ const generateTeam = team => {
   const generateEngineer = engineer => {
       return `
       <div class="card employee-card mx-2 shadow p-3 mb-5 bg-white rounded">
-  <div class="card-header bg-info border border-dark text-light">
+  <div class="card-header bg-primary border border-dark text-light">
       <h2 class="card-title">${engineer.getName()}</h2>
       <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
   </div>
@@ -44,7 +43,7 @@ const generateTeam = team => {
   const generateIntern = intern => {
       return `
       <div class="card employee-card mx-2 shadow p-3 mb-5 bg-white rounded">
-  <div class="card-header bg-info border border-dark text-light">
+  <div class="card-header bg-primary border border-dark text-light">
       <h2 class="card-title">${intern.getName()}</h2>
       <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}</h3>
   </div>
@@ -93,14 +92,14 @@ module.exports = team => {
 <body>
   <div class="container-fluid">
       <div class="row">
-          <div class="col-12 jumbotron mb-3 team-heading bg-success">
+          <div class="col-12 jumbotron mb-3 team-heading bg-danger">
               <h1 class="text-center text-light">My Team</h1>
           </div>
       </div>
   </div>
   <div class="container">
       <div class="row">
-          <div class="team-area col-12 d-flex justify-content-center">
+          <div class="team-area col-12 d-flex flex-wrap justify-content-center">
               ${generateTeam(team)}
           </div>
       </div>
