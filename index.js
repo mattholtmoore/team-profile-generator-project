@@ -158,7 +158,7 @@ const writeFile = str => {
       console.log(err);
       return;
     } else {
-      console.log('Success! You have officially built your team. Congratulations!')
+      console.log('Success! You have officially built your team. Congratulations! 🚀')
     }
   })
 }
