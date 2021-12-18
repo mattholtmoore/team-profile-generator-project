@@ -16,9 +16,9 @@ When the user is prompted for their team members and their information then an H
 ***
 
 ## Links
-[Link to Team Profile Generator](https://mattholtmoore.github.io/)
+[Link to Team Profile Generator](https://mattholtmoore.github.io/team-profile-generator-project/)
 
-[Link to GitHub](https://github.com/mattholtmoore/)  
+[Link to GitHub](https://github.com/mattholtmoore/team-profile-generator-project)  
 
 [Link to Walkthrough Capture](https://watch.screencastify.com/v/Kk4revwAgZmp9nBVVvd5)
 ***
